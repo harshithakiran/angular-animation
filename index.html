@@ -1,0 +1,30 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- load bootstrap and css (bootswatch version) -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <base href="/">
+    <!-- angular, ngRoute, ngAnimate -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body ng-app="animateApp">
+    
+    
+    <div class="page {{ pageClass }}" ng-view></div>
+    <div class="col-md-3 col-sm-12 col-xs-12 col-md-offset-1 col-lg-offset-1 ">
+        <img  ng-bind="profile_pic" >
+        <div class="btn btn-default">
+        <span class="glyphicon glyphicon-camera"></span>
+        <input type="file" ng-model="profile_pic" name="file" accept="image/*" />
+      </div>
+    </div>
+        
+</body>
+</html>
